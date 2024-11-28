@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindControl</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 헤더 -->
+    <header>
+      <h1>MindControl</h1>
+      <p>무대 공포증 극복 프로젝트</p>
+    </header>
+
+    <!-- 메인 컨테이너 -->
+    <main>
+      <!-- 무대 시뮬레이션 화면 -->
+      <section id="stage-container">
+        <div id="stage">
+        </div>
+      </section>
+
+      <!-- 제어 패널 -->
+      <section id="control-panel">
+        <h2>🎛 환경 설정</h2>
+        <!-- MR 업로드 -->
+        <div class="control-group">
+          <label for="uploadMR">노래 MR 업로드:</label>
+          <input type="file" id="uploadMR" accept="audio/*">
+        </div>
+
+        <!-- 배경 소음 볼륨 -->
+        <div class="control-group">
+          <label for="bgVolume">배경 소음 볼륨:</label>
+          <input type="range" id="bgVolume" min="0" max="1" step="0.1" value="0.5">
+        </div>
+
+        <!-- 노래 MR 볼륨 -->
+        <div class="control-group">
+          <label for="mrVolume">노래 MR 볼륨:</label>
+          <input type="range" id="mrVolume" min="0" max="1" step="0.1" value="1">
+        </div>
+
+        <!-- 재생 버튼 -->
+        <button id="playButton">재생</button>
+      </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+      <p>&copy; 2024 doridori</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
